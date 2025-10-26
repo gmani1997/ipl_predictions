@@ -28,8 +28,8 @@ ipl_data = pd.DataFrame({
 
 features = ['team1_wins_last_5', 'team2_wins_last_5', 'venue_advantage', 'toss_winner']
 
-X = ipl_data[[features]]
-y = ipl_data[['winner']]
+X = ipl_data[features]
+y = ipl_data['winner']
 
 model = RandomForestClassifier()
 
