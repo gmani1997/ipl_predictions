@@ -2,8 +2,8 @@
 
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
+# import matplotlib.pyplot as plt
+# import seaborn as sns
 # % matplotlib inline
 import warnings
 warnings.filterwarnings('ignore')
@@ -11,6 +11,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, mean_squared_error, mean_absolute_error
+import joblib
 
 # Load the data
 
@@ -42,3 +43,9 @@ def predict(team1_form, team2_form, venue, toss):
     confidence = model.predict_proba(X)
     return f'winner: {prediction[0]} (Confidence: {confidence: .2%})'
 
+
+# joblib is used to save the .py to .pkl file
+
+joblib.dump(model, 'model.pkl')
+
+# print('Model successfully saved as model.pkl')
