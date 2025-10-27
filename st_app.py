@@ -28,7 +28,7 @@ toss_won = streamlit.sidebar.selectbox('Toss won by team', [1, 2])
 # Load the model
 @streamlit.cache_data
 def get_model():
-    ipl_model = joblib.load("C:/Users/manik/TTT/MLOps/first_model/model.pkl")
+    ipl_model = joblib.load("model.pkl")
     return ipl_model
 
 # predict button
