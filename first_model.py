@@ -13,15 +13,32 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, mean_squared_error, mean_absolute_error
 import joblib
 
+import mysql.connector
+
+# Connect to MySQL
+
+db_config = {
+    'host':'localhost',
+    'user':'root',
+    'password':'Avenzers1@',
+    'database':'database_for_apps'
+}
+
+cnx = mysql.connector.connect(**db_config)
+cursor = cnx.cursor()
+
+
 # Load the data
 
-ipl_data = pd.DataFrame({
-    'team1_wins_last_5': [3, 4, 2, 5, 1],
-    'team2_wins_last_5': [2, 1, 4, 3, 4],
-    'venue_advantage': [1, 0, 0, 1, 0],
-    'toss_winner': [1, 0, 1, 1, 0],
-    'winner': ['team1', 'team2', 'team2', 'team1', 'team2']
-})
+ipl_data = cursor.fetchall()
+
+# ipl_data = pd.DataFrame({
+#     'team1_wins_last_5': [3, 4, 2, 5, 1],
+#     'team2_wins_last_5': [2, 1, 4, 3, 4],
+#     'venue_advantage': [1, 0, 0, 1, 0],
+#     'toss_winner': [1, 0, 1, 1, 0],
+#     'winner': ['team1', 'team2', 'team2', 'team1', 'team2']
+# })
 
 
 # Split and Train the model
