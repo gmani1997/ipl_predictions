@@ -31,21 +31,21 @@ features = ['team1_wins_last_5', 'team2_wins_last_5', 'venue_advantage', 'toss_w
 X = ipl_data[features]
 y = ipl_data['winner']
 
-model = RandomForestClassifier()
+model = RandomForestClassifier(n_estimators=100, random_state= 42)
 
 model.fit(X,y)
 
-
+# No need to predict the model and calculate the metrics over here it should be done in streamlit app only
 # Predictions
 
-def predict(team1_form, team2_form, venue, toss):
-    prediction = model.predict(X)
-    confidence = model.predict_proba(X)
-    return f'winner: {prediction[0]} (Confidence: {confidence: .2%})'
+# def predict(team1_form, team2_form, venue, toss):
+#     prediction = model.predict(X)
+#     confidence = model.predict_proba(X)
+#     return f'winner: {prediction} (Confidence: {confidence: .2%})'
 
 
 # joblib is used to save the .py to .pkl file
 
 joblib.dump(model, 'model.pkl')
 
-# print('Model successfully saved as model.pkl')
+print('Model successfully saved as model.pkl')

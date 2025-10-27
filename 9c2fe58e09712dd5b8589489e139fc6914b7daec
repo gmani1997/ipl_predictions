@@ -1,0 +1,23 @@
+[33mcommit 7e4cede4014bbf3fb0269248b2ec1e82e9adfc23[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Manikanta <manikanta.gadige@gmail.com>
+Date:   Sun Oct 26 15:40:49 2025 +0530
+
+    third commit
+
+[33mcommit 9c2fe58e09712dd5b8589489e139fc6914b7daec[m
+Author: Manikanta <manikanta.gadige@gmail.com>
+Date:   Sun Oct 26 15:32:50 2025 +0530
+
+    send chey bey
+
+[33mcommit 8529e09961a20f97e99f0726f1c072810bcef656[m
+Author: Manikanta <manikanta.gadige@gmail.com>
+Date:   Sun Oct 26 14:53:47 2025 +0530
+
+    second commit
+
+[33mcommit dec93c839f48d6b5b91602acdd2409cc18ba6365[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Manikanta <manikanta.gadige@gmail.com>
+Date:   Sun Oct 26 13:01:32 2025 +0530
+
+    First commit of ipl prediction model using Randomforestclassifier
